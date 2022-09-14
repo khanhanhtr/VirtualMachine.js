@@ -1,21 +1,22 @@
-/* We first define some fundamental base instructions
-Our core instruction shoulds has some instructions for these categories: 
-Moving Data , Math manipulation , Jumping Around to different part of a program 
-Making comparisions and decisions  , Running subroutines and return to previous state
+'use strict'
+/* Essentially our values (literal and instructions) can be move back and 
+forward between register and memory also between registers themselves.
+So for what instruction we currently have is to move the literal from main memory 
+to register, let add some more 
+// Now because registers encoded in bytes are hard to change , we will change the way 
+Move elemenet implement 
 */
-
-/* 
-    Due to an assumsing that these instructions will be used often in our VM, 
-    we dedicate these bytes specific for instruction moving to r1, r2 and adding register
-    Otherwise we can save memory with the other less frequent use instruction
-*/
-const MOV_LIT_R1  = 0x10; 
-const MOV_LIT_R2  = 0x11;
-const ADD_REG_REG = 0x12;
+const MOV_LIT_REG = 0x10;   // Move Literal to register 
+const MOV_REG_REG = 0x11;   // Move register to register 
+const MOV_REG_MEM = 0x12;   // Move register to memory 
+const MOV_MEM_REG = 0x13;   // Move memory to register 
+const ADD_REG_REG = 0x14;   // Add register to register
 
 
 module.exports = {
-    MOV_LIT_R1,
-    MOV_LIT_R2,
+    MOV_LIT_REG,
+    MOV_REG_MEM,
+    MOV_REG_REG,
+    MOV_MEM_REG,
     ADD_REG_REG,
 };
