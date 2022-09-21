@@ -5,8 +5,8 @@ const createMemory = sizeInBytes => {
     const data_view = new DataView(array_buffer);
     return data_view;
 }
+export default createMemory;
 
-module.exports = createMemory;
 
 
 

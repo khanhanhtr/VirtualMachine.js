@@ -1,0 +1,15 @@
+{
+  "name": "VirtualMachine.js",
+  "version": "1.0.0",
+  "description": "16 bit virtual machine ",
+  "main": "index.js",
+  "repository": "git@github.com:khanhanhtr/VirtualMachine.js",
+  "type": "module",
+  "devDependencies": {
+    "babel-jest": "^29.0.3",
+    "jest": "^29.0.3"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  }
+}
